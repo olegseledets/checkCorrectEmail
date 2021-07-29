@@ -18,7 +18,7 @@ bool checkSymbol (char symbol, bool &right) {
 bool checkEmail (std::string &email) {
   bool correctEmail = true;
   bool right = false;  
-  if (email[0] == '.' || email[email.size()] == '.')
+  if (email[0] == '.' || email[email.size()-1] == '.')
     return false;
   int atCount = count(email.begin(), email.end(), '@'); // количество @
   if (atCount > 1 || atCount < 1)
